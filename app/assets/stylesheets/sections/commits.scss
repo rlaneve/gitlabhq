@@ -337,7 +337,12 @@
  * COMMIT ROW
  */
 .commit {
+  height: 30px;
+  padding: 5px;
+
   .browse_code_link_holder {
+    @extend .span2;
+    width: 100px;
     float: right;
   }
 
@@ -361,6 +366,19 @@
     @extend .lined;
     min-width: 65px;
     font-family: $monospace_font;
+    font-size: 90%;
+  }
+
+  .commit-author-name {
+    color: #777;
+    &:hover {
+      color: #999;
+    }
+  }
+
+  a.commit-author-link img.avatar {
+    margin-left: 0px;
+    width: 36px;
   }
 }
 

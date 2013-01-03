@@ -1,12 +1,13 @@
 %li.commit
   .browse_code_link_holder
-    %p
-      %strong= link_to "Browse Code »", project_tree_path(@project, commit), class: "right"
+    .right
+      = link_to commit.short_id(8), project_commit_path(@project, commit), class: "commit_short_id"
+    .right
+      = link_to "Browse Code »", project_tree_path(@project, commit), class: "browse_code_link"
   %p
-    = link_to commit.short_id(8), project_commit_path(@project, commit), class: "commit_short_id"
-    = commit.author_link avatar: true, size: 24
+    = commit.author_link avatar: true, size: 36
     &nbsp;
-    = link_to_gfm truncate(commit.title, length: 70), project_commit_path(@project, commit.id), class: "row_title"
+    = link_to_gfm truncate(commit.title, length: 72), project_commit_path(@project, commit.id), class: "row_title"
 
     %time.committed_ago{ datetime: commit.committed_date, title: commit.committed_date.stamp("Aug 21, 2011 9:23pm") }
       = time_ago_in_words(commit.committed_date)

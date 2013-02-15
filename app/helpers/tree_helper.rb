@@ -5,7 +5,7 @@ module TreeHelper
   # contents - A Grit::Tree object for the current tree
   def render_tree(tree)
     # Render Folders before Files/Submodules
-    folders, files, submodules = tree.trees, tree.blobs, tree.submodules
+    folders, files, submodules = tree.trees.sort_by { |f| f.name.downcase }, tree.blobs.sort_by { |f| f.name.downcase }, tree.submodules
 
     tree = ""
 

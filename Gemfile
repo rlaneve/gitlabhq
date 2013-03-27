@@ -30,7 +30,8 @@ gem 'omniauth-github'
 
 # Extracting information from a git repository
 # Provide access to Gitlab::Git library
-gem "gitlab_git", "~> 4.0.0.pre"
+gem 'gitlab-grit', '2.6.3', git: "https://github.com/rlaneve/grit.git", ref: '2c8203090cc8e7a8cd3b8689ab964d7dde928f11'
+gem 'gitlab_git', '4.0.0', git: "https://github.com/rlaneve/gitlab_git.git", ref: '16f886f3117028636ccf0f4b540d73c4034d6edd'
 
 # Ruby/Rack Git Smart-HTTP Server Handler
 gem 'gitlab-grack', '~> 2.0.0.pre', require: 'grack'

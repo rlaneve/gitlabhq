@@ -32,7 +32,8 @@ gem 'omniauth-github'
 
 # Extracting information from a git repository
 # Provide access to Gitlab::Git library
-gem "gitlab_git", '~> 5.7.1'
+gem 'gitlab-grit', '2.6.4', git: "https://github.com/rlaneve/grit.git", ref: '7ce1a038df64cea09b7106445a03a170f8184840'
+gem 'gitlab_git', '5.7.1', git: "https://github.com/rlaneve/gitlab_git.git", ref: '8f6fed781b68cabdd561ec364fc338b9a3c20574'
 
 # Ruby/Rack Git Smart-HTTP Server Handler
 gem 'gitlab-grack', '~> 2.0.0.pre', require: 'grack'
@@ -49,7 +50,7 @@ gem "gitlab-linguist", "~> 3.0.0", require: "linguist"
 # API
 gem "grape", "~> 0.6.1"
 # Replace with rubygems when nesteted entities get released
-gem "grape-entity", "~> 0.4.1", ref: 'd904381c951e86250c3f44213b349a3dd8e83fb1', git: 'https://github.com/intridea/grape-entity.git' 
+gem "grape-entity", "~> 0.4.1", ref: 'd904381c951e86250c3f44213b349a3dd8e83fb1', git: 'https://github.com/intridea/grape-entity.git'
 gem 'rack-cors', require: 'rack/cors'
 
 # Email validation
@@ -82,7 +83,7 @@ gem "seed-fu"
 
 # Markdown to HTML
 gem "redcarpet",     "~> 2.2.2"
-gem "github-markup", "~> 0.7.4", require: 'github/markup', git: 'https://github.com/gitlabhq/markup.git', ref: '61ade389c1e1c159359338f570d18464a44ddbc4' 
+gem "github-markup", "~> 0.7.4", require: 'github/markup', git: 'https://github.com/gitlabhq/markup.git', ref: '61ade389c1e1c159359338f570d18464a44ddbc4'
 
 # Asciidoc to HTML
 gem  "asciidoctor"

@@ -146,21 +146,33 @@ class GitPushService
       commits: [],
       total_commits_count: push_commits_count
     }
+    data[:created] = true if (oldrev == "0000000000000000000000000000000000000000")
+    data[:deleted] = true if (newrev == "0000000000000000000000000000000000000000")
+    data[:compare] = "#{project.web_url}/compare/#{oldrev}...#{newrev}" if (oldrev != "0000000000000000000000000000000000000000" and newrev != "0000000000000000000000000000000000000000")
 
     # For performance purposes maximum 20 latest commits
     # will be passed as post receive hook data.
     #
     push_commits_limited.each do |commit|
-      data[:commits] << {
+      cdata = {
         id: commit.id,
         message: commit.safe_message,
-        timestamp: commit.committed_date.xmlschema,
+        modified: [],
+        added: [],
+        removed: [],
+        timestamp: commit.date.xmlschema,
         url: "#{Gitlab.config.gitlab.url}/#{project.path_with_namespace}/commit/#{commit.id}",
         author: {
           name: commit.author_name,
           email: commit.author_email
         }
       }
+      commit.quick_diffs.each do |diff|
+        cdata[:added] << diff.new_path if diff.new_file
+        cdata[:removed] << diff.new_path if diff.deleted_file
+        cdata[:modified] << diff.new_path unless (diff.new_file or diff.deleted_file)
+      end
+      data[:commits] << cdata
     end
 
     data

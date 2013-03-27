@@ -22,7 +22,8 @@ gem 'omniauth-twitter'
 gem 'omniauth-github'
 
 # Extracting information from a git repository
-gem "gitlab-grit", '~> 1.0.0', require: 'grit'
+gem "grit",          git: "https://github.com/rlaneve/grit.git",           ref: 'c0c9b3f5637eec1eea78853f7701d9abf542177a'
+#gem "gitlab-grit", '~> 1.0.0', require: 'grit'
 gem 'grit_ext', '~> 0.6.2'
 
 # Ruby/Rack Git Smart-HTTP Server Handler

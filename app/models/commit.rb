@@ -11,8 +11,8 @@ class Commit
   attr_accessor :commit, :head, :refs
 
   delegate  :message, :authored_date, :committed_date, :parents, :sha,
-            :date, :committer, :author, :diffs, :tree, :id, :stats,
-            :to_patch, to: :commit
+            :date, :committer, :author, :diffs, :quick_diffs, :tree, :id,
+            :stats, :to_patch, to: :commit
 
   class << self
     def find_or_first(repo, commit_id = nil, root_ref)

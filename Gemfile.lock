@@ -24,6 +24,41 @@ GIT
       rake (>= 0.8.7)
 
 GIT
+  remote: https://github.com/gitlabhq/grack.git
+  revision: ba46f3b0845c6a09d488ae6abdce6ede37e227e8
+  ref: ba46f3b0845c6a09d488ae6abdce6ede37e227e8
+  specs:
+    grack (1.0.0)
+      rack (~> 1.4.1)
+
+GIT
+  remote: https://github.com/rlaneve/grit.git
+  revision: c0c9b3f5637eec1eea78853f7701d9abf542177a
+  ref: c0c9b3f5637eec1eea78853f7701d9abf542177a
+  specs:
+    grit (2.5.0)
+      diff-lcs (~> 1.1)
+      mime-types (~> 1.15)
+      posix-spawn (~> 0.3.6)
+
+GIT
+  remote: https://github.com/gitlabhq/grit_ext.git
+  revision: 8e6afc2da821354774aa4d1ee8a1aa2082f84a3e
+  ref: 8e6afc2da821354774aa4d1ee8a1aa2082f84a3e
+  specs:
+    grit_ext (0.6.1)
+      charlock_holmes (~> 0.6.9)
+
+GIT
+  remote: https://github.com/gitlabhq/pygments.rb.git
+  revision: db1da0343adf86b49bdc3add04d02d2e80438d38
+  branch: master
+  specs:
+    pygments.rb (0.3.2)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.1.0)
+
+GIT
   remote: https://github.com/gitlabhq/raphael-rails.git
   revision: cb2c92a040b9b941a5f1aa1ea866cc26e944fe58
   specs:

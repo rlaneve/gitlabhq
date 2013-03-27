@@ -30,7 +30,8 @@ gem 'omniauth-github'
 
 # Extracting information from a git repository
 # Provide access to Gitlab::Git library
-gem "gitlab_git", "~> 4.0.0"
+gem 'gitlab-grit', '2.6.3', git: "https://github.com/rlaneve/grit.git", ref: '2c8203090cc8e7a8cd3b8689ab964d7dde928f11'
+gem 'gitlab_git', '4.1.0.pre', git: "https://github.com/rlaneve/gitlab_git.git", ref: '6bbbc2fcbb4961b9d11336d8726457a7facd61cb'
 
 # Ruby/Rack Git Smart-HTTP Server Handler
 gem 'gitlab-grack', '~> 2.0.0.pre', require: 'grack'
@@ -82,7 +83,7 @@ gem "seed-fu"
 
 # Markdown to HTML
 gem "redcarpet",     "~> 2.2.2"
-gem "github-markup", "~> 0.7.4", require: 'github/markup', git: 'https://github.com/gitlabhq/markup.git', ref: '61ade389c1e1c159359338f570d18464a44ddbc4' 
+gem "github-markup", "~> 0.7.4", require: 'github/markup', git: 'https://github.com/gitlabhq/markup.git', ref: '61ade389c1e1c159359338f570d18464a44ddbc4'
 
 # Asciidoc to HTML
 gem  "asciidoctor"

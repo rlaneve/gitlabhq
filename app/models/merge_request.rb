@@ -99,11 +99,11 @@ class MergeRequest < ActiveRecord::Base
   end
 
   def check_if_can_be_merged
-    if Gitlab::Satellite::MergeAction.new(self.author, self).can_be_merged?
-      mark_as_mergeable
-    else
+    #if Gitlab::Satellite::MergeAction.new(self.author, self).can_be_merged?
+    #  mark_as_mergeable
+    #else
       mark_as_unmergeable
-    end
+    #end
   end
 
   def diffs

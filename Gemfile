@@ -36,7 +36,7 @@ gem 'gitlab_omniauth-ldap', '1.0.3', require: "omniauth-ldap"
 gem "gitlab-pygments.rb", '~> 0.3.2', require: 'pygments.rb'
 
 # Git Wiki
-gem "gitlab-gollum-lib", "~> 1.0.0", require: 'gollum-lib'
+gem "gitlab-gollum-lib", git: "https://github.com/rlaneve/gollum-lib.git", ref: "1a25d4611f7925158f1105c118d16ca730f8e5e7"
 
 # Language detection
 gem "github-linguist", require: "linguist"

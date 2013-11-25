@@ -34,7 +34,7 @@ gem 'gitlab-grack', '~> 1.0.1', require: 'grack'
 gem 'gitlab_omniauth-ldap', '1.0.3', require: "omniauth-ldap"
 
 # Syntax highlighter
-gem "gitlab-pygments.rb", '~> 0.3.2', require: 'pygments.rb'
+gem "gitlab-pygments.rb", '~> 0.5.4', require: 'pygments.rb'
 
 # Git Wiki
 gem "gitlab-gollum-lib", "~> 1.0.1", require: 'gollum-lib'

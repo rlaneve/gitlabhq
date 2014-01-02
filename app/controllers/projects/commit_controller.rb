@@ -13,6 +13,7 @@ class Projects::CommitController < Projects::ApplicationController
 
     @line_notes = project.notes.for_commit_id(commit.id).inline
     @branches = project.repository.branch_names_contains(commit.id)
+    @tags = project.repository.tag_names_contains(commit.id)
 
     begin
       @suppress_diff = true if commit.diff_suppress? && !params[:force_show_diff]

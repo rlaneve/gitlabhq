@@ -105,6 +105,11 @@ module CommitsHelper
     branches.sort.map { |branch| link_to(branch, project_tree_path(project, branch)) }.join(", ").html_safe
   end
 
+  # Returns the sorted alphabetically links to tags, separated by a comma
+  def commit_tags_links(project, tags)
+    tags.sort.map { |tag| link_to(tag, project_commits_path(project, tag)) }.join(", ").html_safe
+  end
+
   def parallel_diff_lines(project, commit, diff, file)
     old_file = project.repository.blob_at(commit.parent_id, diff.old_path) if commit.parent_id
     deleted_lines = {}
